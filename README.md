@@ -14,9 +14,3 @@ oc apply -f redis-statefulset.yaml
 oc apply -f redis-sentinel-statefulset.yaml
 ```
 
-# TODO
-
-* document what's going on
-* authentication may be desirable
-# redis-sentinel-openshift
-# redis-sentinel-openshift

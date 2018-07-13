@@ -7,10 +7,11 @@ I need a cluster of (generally 3) redis instances with sentinel failover.  Maste
 # How?
 
 ```
-kubectl apply -f redis-configmap.yaml redis-sentinel-configmap.yaml
-kubectl apply -f redis-services.yaml
-kubectl apply -f redis-statefulset.yaml
-kubectl apply -f redis-sentinel-statefulset.yaml
+oc apply -f redis-configmap.yaml 
+oc apply -f redis-sentinel-configmap.yaml
+oc apply -f redis-services.yaml
+oc apply -f redis-statefulset.yaml
+oc apply -f redis-sentinel-statefulset.yaml
 ```
 
 # TODO

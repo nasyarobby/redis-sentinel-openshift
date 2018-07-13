@@ -7,9 +7,6 @@ metadata:
 data:
   sentinel.conf: |
     # sentinel config
-    #port 26379
-    #sentinel monitor redis redis-0.redis 6379 2
-    #sentinel down-after-milliseconds redis 5000
     sentinel monitor mymaster redis-0.redis 6379 2 
     sentinel down-after-milliseconds mymaster 60000 
     sentinel failover-timeout mymaster 180000 

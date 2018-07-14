@@ -14,3 +14,8 @@ oc apply -f redis-statefulset.yaml
 oc apply -f redis-sentinel-statefulset.yaml
 ```
 
+# Template
+```
+oc apply -f templates/redis-sentinel-template.yaml -n openshift
+
+```

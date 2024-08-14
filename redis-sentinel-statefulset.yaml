@@ -22,7 +22,7 @@ spec:
               # Copy appropriate conf.d files from config-map to emptyDir.\n
               cp /mnt/config-map/sentinel.conf /mnt/conf/sentinel.conf\n
             "]
-        image:  docker-registry-default.apps.paosin.local/openshift/redis
+        image:  image-registry.openshift-image-registry.svc:5000/mpajak/redis
         volumeMounts:
         - name: conf
           mountPath: /mnt/conf
@@ -31,7 +31,7 @@ spec:
       containers:
       - name: redis-sentinel
         command: ["/opt/rh/rh-redis32/root/usr/bin/redis-sentinel", "/etc/redis/sentinel.conf" , "--protected-mode no"]
-        image: docker-registry-default.apps.paosin.local/openshift/redis
+        image: image-registry.openshift-image-registry.svc:5000/mpajak/redis
         ports:
         - name: redis-sentinel
           containerPort: 26379
@@ -63,4 +63,4 @@ spec:
       accessModes: ["ReadWriteOnce"]
       resources:
         requests:
-          storage: 10Mi
+          storage: 4Gi
